@@ -125,7 +125,7 @@
       </p>
      
       
-      <form name="myForm" class="form" action="#"  onsubmit="return validateForm()" method="post">
+      <form name="myForm" class="form"  onsubmit="return validateForm()">
  <input type="text" name="fname" placeholder="Enter reference Number">
     <button type="submit">Submit</button>
 </form>
@@ -135,7 +135,7 @@
 function validateForm() {
   let x = document.forms["myForm"]["fname"].value;
   if (x <8) {
-    alert("Reference Number must not be empty");
+    alert("Reference Number must not be 8");
     return false;
   }
  
