@@ -123,15 +123,24 @@
         Enter your reference number below to check if your details are in the
         <span>GMSA-KNUST</span> Database
       </p>
-      <form action="#" method="post">
-        <input
-          type="text"
-          name="reference"
-          required
-          placeholder="Reference Number"
-        />
-        <button type="submit">Search</button>
-      </form>
+     
+      
+      <form name="myForm" class="form" action="#"  onsubmit="return validateForm()" method="post">
+ <input type="text" name="fname" placeholder="Enter reference Number">
+    <button type="submit">Submit</button>
+</form>
     </div>
+    <script>
+    
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x <8) {
+    alert("Reference Number must not be empty");
+    return false;
+  }
+ 
+}
+    </script>
   </body>
+  
 </html>
